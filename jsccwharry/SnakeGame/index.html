@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeGame</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="sidebar">
+        <h2>INSTRUCTIONS</h2>
+        <ul>
+            <li>1. Do not bump into wall else game will be over. </li>
+            <li>2. Use upward, downward ,left and right keys to change direction</li>
+        </ul>
+    </div>
+            
+    <div class="body">
+        <div class="scorebrd" id="scoreBox">Score: 0</div>
+        <div class="scorebrd" id="hiscoreBox">HiScore: 0</div>
+        <div id="board"></div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

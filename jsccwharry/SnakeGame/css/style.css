@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/bg.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle{
+    position: absolute;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: black url("../img/menu.png");
+    border-radius: 50%;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.toggle.active{
+    background: #000 url("../img/close.png");
+    background-size: 38px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    left: 150px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    left: 100px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: black;
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid rgb(214, 204, 204);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(rgb(240, 124, 124), rgb(212, 212, 76));
+    border: 2px solid rgb(34, 4, 34); 
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid rgb(31, 29, 29);
+    border-radius: 8px;
+}
+
+.food{
+    background: linear-gradient(rgb(187, 17, 54), rgb(136, 24, 76));
+    border: 1.3px solid black;
+    border-radius: 12px;
+}
+
+
+.sidebar{
+    position: fixed;
+    background: rgba(255, 255, 255, .8);
+    transition: 0.5s;
+    padding: 40px;
+    z-index: 100;
+    right: -100%;
+}
+
+.sidebar.active{
+    right: 0;
+    height: 100vh;
+    width: 260px;
+}
+
+.sidebar h2{
+    position: absolute;
+    top: 50px;
+}
+
+.sidebar ul{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar ul li{
+    margin-top: 20px;
+    list-style: none;
+    font-weight: 600;
+    font-size: larger;
+}
+
+@media screen and ( max-width : 538px) and (min-width :150px) {
+    
+    .board{
+        height: 184px;
+        width: 188px;
+    }
+    .scorebrd#scoreBox{
+        left: 0;
+        font-size: 25px;
+    }
+    .scorebrd#hiscoreBox{
+        left: 0;
+        margin-top: -14px;
+        font-size: 25px;
+    }
+    .sidebar{
+        display: none;
+    }
+    .toggle{
+        display: none;
+    }
+    
+
+}
+
